@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="Full Stack,full stack soft,Full Stack Software,desarrollo de sitios web,scrollTo,plugin scrollTo,scrollspy,plugin scrollspy">
+	<meta name="author" content="Full Stack Soft">
+    <link rel="shortcut icon" href="http://fullstacksoftsas.com/lib/img/icon.png">
+    <title>Plugin Scroll To and Scroll Spy - FSS | Full Stack Soft</title>
+    <link href="http://fullstacksoftsas.com/lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://fullstacksoftsas.com/lib/css/docs.css" rel="stylesheet">
+    <link href="http://fullstacksoftsas.com/lib/css/pygments-manni.css" rel="stylesheet">
+	<link href="http://fullstacksoftsas.com/lib/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+	.box-scroll-1 {
+		height: 240px;
+		width: 500px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		margin: 0 auto;
+	}
+	.menu-top-fss {
+		position: absolute;
+		padding: 5px;
+		background-color: #563d7c;
+		width: 483px;
+	}
+	.menu-left-fss {
+		position: absolute;
+		padding: 5px;
+		background-color: #563d7c;
+		width: 80px;
+		height: 223px;
+	}
+	.menu-top-fss li {
+		padding: 5px;
+		display: inline;
+	}
+	.menu-left-fss li {
+		padding: 5px;
+		display: block;
+	}
+	.menu-top-fss li a, .menu-left-fss li a {
+		padding: 5px;
+		text-decoration: none;
+	}
+	.menu-top-fss li.active a,.menu-left-fss li.active a {
+		color: #c7254e;
+	}
+	.box-scroll-1 section h4 {
+		color: #FFF;
+		padding-top: 10px;
+		padding-left: 10px;
+		margin: 0;
+	}
+	.box-afss {
+		background-color: #00AEFF;
+	}
+	.box-bfss {
+		background-color: #292929;
+	}
+	.box-cfss {
+		background-color: #FF3500;
+	}
+	.box-afss,.box-bfss,.box-cfss {
+		display: inline;
+		min-height: 240px;
+		min-width: 900px;
+	}
+	.box-pparent{
+        width: 260px;
+        height: 240px;
+        overflow: auto;
+        overflow-y: hidden;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+	.box-pparent img{
+        max-height: 100%;
+        width: auto;
+		margin: 0;
+		margin-left: 5px;
+        display: inline;
+    }
+
+	.contenedor {
+	  width: 500px;
+	  height: 240px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+	  margin: 0 auto;
+	}
+	.contenedor ul {
+	  position: absolute;
+	  padding: 5px;
+	  width: 483px;
+	  background-color: #563d7c;
+	}
+	.contenedor ul li {
+	  display: inline;
+	  padding: 5px;
+	}
+	.contenedor ul li a {
+	  text-decoration: none;
+	  padding: 5px;
+	}
+	.contenedor ul li.active a {
+	  color: #c7254e;
+	}
+	.contenedor section {
+	  color: #FFF;
+	  width: 100%;
+	  height: 300px;
+	}
+	.contenedor #item1a {
+	  margin-top: 30px;
+	  background-color: #00AEFF;
+	}
+	.contenedor #item2a {
+	  background-color: #292929;
+	}
+	.contenedor #item3a {
+	  background-color: #FF3500;
+	}
+	</style>
+</head>
+<body>
+	<h1 class="color-bootstrap font-weight-bold text-center margin-lg-t-b">Plugin Scroll To and Scroll Spy - <a class="not-text-decoration font-weight-bold" href="http://fullstacksoftsas.com/"><span style="color: #E74C3C !important;">Full Stack</span> <span style="color: #5DADE2 !important;">Soft</span></a></h1>
+	<!--Scroll-Top-->
+	<div class="box-scroll-1 margin-lg-t-b scrollfss">
+		<ul class="menu-top-fss">
+			<li class="active"><a data-fss="item1" href="#">Item 1</a></li>
+			<li><a data-fss="item2" href="#">Item 2</a></li>
+			<li><a data-fss="item3" href="#">Item 3</a></li>
+		</ul>
+		<section id="item1" style="background-color: #00AEFF; width: 100%;height: 300px; margin-top: 30px;"><h4>Section 1</h4></section>
+		<section id="item2" style="background-color: #292929; width: 100%;height: 300px;"><h4>Section 2</h4></section>
+		<section id="item3" style="background-color: #FF3500; width: 100%;height: 300px;"><h4>Section 3</h4></section>
+	</div>
+	<br><br>
+	<!--Scroll-Left-->
+	<div class="box-pparent scrollleftfss">
+		<ul class="menu-left-fss">
+			<li class="active"><a data-fss="item4" href="#">Item 1</a></li>
+			<li><a data-fss="item5" href="#">Item 2</a></li>
+			<li><a data-fss="item6" href="#">Item 3</a></li>
+			<li><a data-fss="item7" href="#">Item 4</a></li>
+			<li><a data-fss="item8" href="#">Item 5</a></li>
+		</ul>
+		<img id="item4" style="margin-left: 80px;" src="http://fullstacksoftsas.com/lib/img/tecnologias/html5.png"/>
+		<img id="item5" src="http://fullstacksoftsas.com/lib/img/tecnologias/css3.png"/>
+		<img id="item6" src="http://fullstacksoftsas.com/lib/img/tecnologias/javascript.png"/>
+		<img id="item7" src="http://fullstacksoftsas.com/lib/img/tecnologias/php.png"/>
+		<img id="item8" src="http://fullstacksoftsas.com/lib/img/tecnologias/angularjs.png"/>
+	</div>
+	<br><br>
+	<div class="container margin-md-t-b">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#doc_fullstacksoft" class="btn btn-primary btn-block btn-lg not-border-radius btn-doc-fullstacksoft"><i class="fa fa-book" aria-hidden="true"></i> Documentaci&oacute;n</a>
+			</div>
+			<div class="col-md-6">
+				<a href="http://scrolltospy.fullstacksoftsas.com/scrollToSpy-fullstacksoftsas.rar" class="btn btn-info btn-block btn-lg not-border-radius"><i class="fa fa-cloud-download" aria-hidden="true"></i> Descargar</a>
+			</div>
+		</div>
+	</div>
+<div class="container margin-md-t-b">
+<div class="bs-docs-section">
+<div id="doc_fullstacksoft" class="page-header">
+	<h1 id="code text-info">Plugin Scroll To Element and Spy</h1>
+</div>
+<h2>Import Plugin</h2>
+<p>Para importar el plugin se debe incluir el fichero <code>js</code> del plugin a trav&eacute;s de la etiqueta<code>&lt;script&gt;</code>.</p>
+<div class="bs-example not-border-radius">Debe incluir el plugin al final de la etiqueta <code>&lt;body&gt;</code>.</div>
+<div class="highlight not-border-radius">
+<pre><code class="js"><span class="nt">&lt;body&gt;</span>
+  ...
+  <span class="nt">&lt;script <span class="na">type</span>=<span class="s">"text/javascript"</span> <span class="na">src</span>=<span class="s">"http://fullstacksoftsas.com/lib/js/plugin/jquery.scrollSpyTo_fss.js"</span>&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+</div>
+
+<h2 class="margin-md-t">Html</h2>
+<div class="bs-example not-border-radius">Para el correcto funcionamiento del plugin se debe crear una estructura html que est&eacute; oriendata hacia dos enfoques. El primero es hacia el <code>Scroll Top</code> y el segundo enfoque hacia <code>Scroll Left</code>.</div>
+<div class="highlight not-border-radius"><pre><code class="html"><span class="c">&lt;!-- Scroll Top --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contenedor"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span></span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">data-fss=</span><span class="s">"item1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Item1<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span></span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">data-fss=</span><span class="s">"item2"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Item2<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span></span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">data-fss=</span><span class="s">"item3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Item3<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span></span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">data-fss=</span><span class="s">"item4"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Item4<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">...</span>
+    <span class="nt">&lt;li</span></span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">data-fss=</span><span class="s">"itemN"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>ItemN<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"item1"</span><span class="nt">&gt;</span>Element 1<span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"item2"</span><span class="nt">&gt;</span>Element 2<span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"item3"</span><span class="nt">&gt;</span>Element 3<span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"item4"</span><span class="nt">&gt;</span>Element 4<span class="nt">&lt;/section&gt;</span>
+  <span class="nt">...</span>
+  <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"itemN"</span><span class="nt">&gt;</span>Element N<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+<h2 class="margin-md-t">CSS</h2>
+<div class="bs-example not-border-radius">Hay que adicionar los estilos correspondientes al componente en el que se usar&aacute; en plugin. Importante es aclarar que si el plugin se usar&aacute;a en una elemento que no es el <code>body</code> entonces hay que crear una clase o id que identifique el elemento.</div>
+<div class="highlight"><pre><code class="css"><span class="nc">.contenedor</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">500</span><span class="p">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">240</span><span class="p">px</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="o">-</span><span class="k">y</span><span class="o">:</span> <span class="p">scroll</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="o">-</span><span class="k">x</span><span class="o">:</span> <span class="p">hidden</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="p">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">ul</span> <span class="p">{</span>
+  <span class="k">position</span><span class="o">:</span> <span class="p">absolute</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">5</span><span class="p">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">483</span><span class="p">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">563d7c</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">ul li</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="p">inline</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">5</span><span class="p">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">ul li a</span> <span class="p">{</span>
+  <span class="k">text</span><span class="o">-</span><span class="k">decoration</span><span class="o">:</span> <span class="p">none</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">5</span><span class="p">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">ul li</span><span class="nc">.active</span> <span class="s">a</span> <span class="p">{</span>
+  <span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">c7254e</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">section</span> <span class="p">{</span>
+  <span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">FFF</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="p">%</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">300</span><span class="p">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">#item1</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="o">-</span><span class="k">top</span><span class="o">:</span> <span class="m">30</span><span class="p">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">00AEFF</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">#item2</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">292929</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.contenedor</span> <span class="s">#item3</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="p">#</span><span class="m">FF3500</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 class="margin-md-t">JavaScript</h2>
+<div class="bs-example not-border-radius">
+C&oacute;digo <code>JavaScript</code> de uso simple para el enfoque al Scroll Top.
+</div>
+<div class="highlight not-border-radius"><pre><code class="js"><span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">".contenedor"</span><span class="p">).</span><span class="nx">scrollSpyTo_fss</span><span class="p">({</span>
+	  <span class="nx">selectorItem</span><span class="o">:</span> <span class="s1">'.contenedor ul li a'</span><span class="p">,</span> <span class="c1">// Selector para los elementos del menu</span>
+	  <span class="nx">parentItem</span><span class="o">:</span> <span class="kc">1</span><span class="p">,</span>                       <span class="c1">// Padre para clase .active queda 1 nivel arriba</span>
+	  <span class="nx">container</span><span class="o">:</span> <span class="s1">'.contenedor'</span><span class="p">,</span>            <span class="c1">// Selector para el contenedor donde se hace el evento de Scroll</span>
+	  <span class="nx">buffer</span><span class="o">:</span> <span class="kc">30</span><span class="p">,</span>                          <span class="c1">// Atributo referido al offset que ocupa el elemento del menu, ejemplo el menu ocupa 30px de height</span>
+	  <span class="nx">scrollTo</span><span class="o">:</span> <span class="kc">true</span><span class="p"></span>                       <span class="c1">// Activaci&oacute;n del evento ScrollTo</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+</div>
+</div>
+	<div class="box-scroll-3 contenedor">
+		<ul>
+			<li class="active"><a data-fss="item1a" href="#">Item1</a></li>
+			<li><a data-fss="item2a" href="#">Item2</a></li>
+			<li><a data-fss="item3a" href="#">Item3</a></li>
+		</ul>
+		<section id="item1a">Element 1</section>
+		<section id="item2a">Element 2</section>
+		<section id="item3a">Element 3</section>
+	</div>
+	<br><br>
+	<!--END DOC-->
+	
+	<div id="footer" style="height: 60px; background-color: #f5f5f5;">
+      <div class="container" style="padding-left: 15px; padding-right: 15px;">
+        <p class="text-muted credit" style="margin: 20px 0;">
+			<script type="text/javascript">
+                copyright = new Date();
+                update = copyright.getFullYear();
+                document.write("Copyright &COPY; - Todos los derechos reservados -" + ' <a href="http://fullstacksoftsas.com/">Miguel Le&oacute;n </a> - <a class="not-text-decoration" href="http://fullstacksoftsas.com"><span style="color: #E74C3C !important;">Full Stack</span> <span style="color: #5DADE2 !important;">Soft</span></a> - ' + update);
+            </script>
+		</p>
+      </div>
+    </div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://fullstacksoftsas.com/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://fullstacksoftsas.com/lib/js/plugin/jquery.scrollSpyTo_fss.js"></script>
+<script>
+$(document).ready(function(){
+	$('.scrollfss').scrollSpyTo_fss({selectorItem: '.menu-top-fss li a', parentItem: 1,container: '.scrollfss',buffer: 30,scrollTo:true});
+	$('.scrollfssleft').scrollSpyTo_fss({selectorItem: '.menu-left-fss li a',mode: 'horizontal', parentItem: 1,container: '.scrollleftfss',buffer: 80,scrollTo:true});
+	$(".contenedor").scrollSpyTo_fss({selectorItem: '.box-scroll-3 ul li a', parentItem: 1,container: '.contenedor',buffer: 30,scrollTo: true});
+	//Docs
+	$('.btn-doc-fullstacksoft').click(function(e){
+		var bx = $(this);
+		e.preventDefault();
+		hash = $(this).attr('href');
+        $('html,body').animate({
+			scrollTop: $(hash).offset().top
+		}, 1000);
+	});
+});
+</script>
+</body>
+</html>
